@@ -105,9 +105,9 @@ const ANavBar = ({ children }) => {
             style={{ paddingLeft: isOpen ? '250px' : '50px' }}
             className="main-content d-flex flex-column w-100 me-4 "
           >
-            <div className="nametag w-100 p-3 m-2 shadow bg-light ">
+            <div className="d-flex justify-content-between nametag w-100 p-3 m-2 shadow bg-light ">
               <h1>Food Bank - Admin Section</h1>
-              <div className="d-flex justify-content-between">
+              <div className="">
                 {/* <button className="btn btn-primary">{userId}</button>
                 <button className="btn btn-warning">{userRole}</button> */}
                 <Button className="btn btn-danger" onClick={handleLogout}>

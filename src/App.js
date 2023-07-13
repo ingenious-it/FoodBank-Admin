@@ -7,13 +7,7 @@ import PRoutes from './PackingSection/PRoutes';
 import DRoutes from './DeliverySection/DRoutes';
 import ARoutes from './AdminSection/ARoutes';
 import WRoutes from './warehouse/WRoutes';
-import Dashboard from './AdminSection/AdminDashBoard';
-import UserCreation from './AdminSection/userCreation';
-import VictimDetails from './AdminSection/VictimDetails';
-import DataSupplierDetails from './AdminSection/DataSupplierDetails';
-import DeliveryPerson from './AdminSection/DeliverypersonDetails';
-import ANavBar from './AdminSection/AdminSideNavigation';
-import PNavBar from './PackingSection/PackingSideNavigation';
+
 
 
 
