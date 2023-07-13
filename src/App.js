@@ -4,12 +4,18 @@ import { Route,Routes, BrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdminLogin from './Login';
 import PRoutes from './PackingSection/PRoutes';
-import VictimInfo1 from './DeliverySection/VictimInfo1';
 import DRoutes from './DeliverySection/DRoutes';
 import ARoutes from './AdminSection/ARoutes';
 import WRoutes from './warehouse/WRoutes';
+import Dashboard from './AdminSection/AdminDashBoard';
+import UserCreation from './AdminSection/userCreation';
+import VictimDetails from './AdminSection/VictimDetails';
+import DataSupplierDetails from './AdminSection/DataSupplierDetails';
+import DeliveryPerson from './AdminSection/DeliverypersonDetails';
+import ANavBar from './AdminSection/AdminSideNavigation';
+import PNavBar from './PackingSection/PackingSideNavigation';
 
-import { ToastContainer } from 'react-toastify';
+
 
 function App() {
   return (
@@ -26,11 +32,14 @@ function App() {
 
 
 
-      {/* <Route path='/deliverySection' element={<DeliveryHome/>}/> */}
+ 
       
         
        
       </BrowserRouter>
+      
+     
+    
     </React.Fragment>
   );
 }

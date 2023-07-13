@@ -5,9 +5,10 @@ import { NavLink, useLocation } from "react-router-dom";
 import { BsBagPlusFill } from "react-icons/bs";
 import { RiFileList3Fill } from "react-icons/ri";
 import { BsBoxArrowRight } from "react-icons/bs";
-import AddItems from "./AddItems";
+
 import ItemDetails from "./itemsDetails";
 import IssueItems from "./IssueItems";
+import AddItems from "./AddItems";
 
 
 

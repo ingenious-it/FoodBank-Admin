@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import './AdminNavBar.css';
-import AdminHome from './AdminHome';
+
 import DataSupplierDetails from './DataSupplierDetails';
 import VictimDetails from './VictimDetails';
 import AcceptedVictimsDetails from './AcceptedVictimsDetails';
@@ -16,6 +16,7 @@ import UserCreation from './userCreation';
 import jwt_decode from 'jwt-decode';
 import { Button } from 'react-bootstrap';
 import DeliveryPerson from './DeliverypersonDetails';
+import Dashboard from './AdminDashBoard';
 
 const ANavBar = ({ children }) => {
   const location1 = useLocation();
@@ -47,21 +48,21 @@ const ANavBar = ({ children }) => {
     },
     {
       path: '/deliveryPerson',
-      name: 'Create Users',
+      name: 'Delivery Person',
       icon: <FaAddressCard />,
-    },
+    }
   
   ];
-  const decodedToken = jwt_decode(localStorage.getItem('token'));
-  const userId = decodedToken.userName;
-  const userRole = decodedToken.role;
+
+  // *****not working
+  // const decodedToken = jwt_decode(localStorage.getItem('token'));
+  // const userId = decodedToken.userName;
+  // const userRole = decodedToken.role;
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Perform any necessary logout actions
-
-    // Navigate to the home page
+    
     navigate('/');
   };
 
@@ -107,8 +108,8 @@ const ANavBar = ({ children }) => {
             <div className="nametag w-100 p-3 m-2 shadow bg-light ">
               <h1>Food Bank - Admin Section</h1>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-primary">{userId}</button>
-                <button className="btn btn-warning">{userRole}</button>
+                {/* <button className="btn btn-primary">{userId}</button>
+                <button className="btn btn-warning">{userRole}</button> */}
                 <Button className="btn btn-danger" onClick={handleLogout}>
                   Logout
                 </Button>
@@ -117,15 +118,11 @@ const ANavBar = ({ children }) => {
 
             <div className="w-100 p-3 m-2">
               {/* conditional render */}
-              {currentRoute === '/AdminHome' && <AdminHome />}
+              {currentRoute === '/AdminHome' && <Dashboard />}
               {currentRoute === '/DataSupplierDetails' && <DataSupplierDetails />}
               {currentRoute === '/VictimDetails' && <VictimDetails />}
-              {currentRoute === '/AcceptedVictimsDetails' && (
-                <AcceptedVictimsDetails />
-              )}
-              {currentRoute === '/RejectedVictimsDetails' && (
-                <RejectedVictimsDetails />
-              )}
+              {currentRoute === '/AcceptedVictimsDetails' &&  <AcceptedVictimsDetails /> }
+              {currentRoute === '/RejectedVictimsDetails' && <RejectedVictimsDetails />}
               {currentRoute === '/userCreation' && <UserCreation />}
               {currentRoute === '/deliveryPerson' && <DeliveryPerson />}
             </div>

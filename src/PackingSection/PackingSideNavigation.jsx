@@ -9,6 +9,7 @@ import {
 }from "react-icons/fa";
 import {AiOutlineAppstoreAdd}from "react-icons/ai";
 import {CgExtensionRemove}from "react-icons/cg";
+
 import { NavLink, useLocation } from 'react-router-dom';
 import './PackingNavBar.css';
 import AddPackages from './AddPackages';
